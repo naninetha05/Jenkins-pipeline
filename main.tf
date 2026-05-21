@@ -41,7 +41,7 @@ resource "aws_instance" "my_server" {
       sudo sleep 120
       sudo ssh-keygen -R ${self.public_ip}
        
-      sudo ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ${self.public_ip}, playbook.yaml -u ec2-user --private-key /home/trevor/keys/newmumbaikey 
+      sudo ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i ${self.public_ip}, playbook.yaml -u ec2-user --private-key /home/ubuntu/project-key.pem 
     EOT
   }
 }
