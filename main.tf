@@ -18,8 +18,7 @@ resource "aws_instance" "my_server" {
   ami                  = "ami-07a00cf47dbbc844c"
   key_name             = "project-key"
   availability_zone    = "ap-south-1b"
-  hibernation          = true
-
+ 
   tags = {
     Name = "infra"
   }
