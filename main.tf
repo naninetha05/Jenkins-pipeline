@@ -30,7 +30,7 @@ resource "aws_instance" "my_server" {
   }
 
   ebs_block_device {
-    device_name             = "/dev/sdb"
+    device_name             = "/dev/sdh"
     volume_size             = 8
     encrypted               = true
     delete_on_termination   = true
