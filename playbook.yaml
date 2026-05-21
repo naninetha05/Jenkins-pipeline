@@ -1,7 +1,7 @@
 ---
 - name: Configure EC2 instance
   remote_user: ubuntu
-  become: true
+  become: yes
   become_method: sudo
   hosts: all
   tasks:
