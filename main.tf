@@ -20,22 +20,11 @@ resource "aws_instance" "my_server" {
   availability_zone    = "ap-south-1b"
   hibernation          = true
 
-  root_block_device {
-    encrypted   = true
-    volume_size = 10
-  }
-
   tags = {
     Name = "infra"
   }
 
-  ebs_block_device {
-    device_name             = "/dev/sdh"
-    volume_size             = 8
-    encrypted               = true
-    delete_on_termination   = true
-  }
-
+ 
   provisioner "local-exec" {
     command = <<EOT
       sudo sleep 120
