@@ -1,4 +1,4 @@
-
+terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -8,11 +8,16 @@
 }
 
 provider "aws" {
+  # Configuration options
+}
+
+
+provider "aws" {
   region = "ap-south-1"
 }
 
 resource "aws_instance" "my_server" {
-  instance_type        = "t2.micro"
+  instance_type        = "t3.micro"
   ami                  = "ami-07a00cf47dbbc844c"
   key_name             = "projeck-key"
   availability_zone    = "ap-south-1b"
